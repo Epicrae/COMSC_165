@@ -1,15 +1,37 @@
 #include<iostream>
+
 using namespace std;
 
+
+/***************** Functions *********************************/
+
+// Prompts for a new string and appends it to the working string.
 char* append(char* str, int length);
+
+// Prompts for an input string, searches the working string for it, 
+// and deletes it if found.
 char* del(char* str, int length);
-void exit(bool &keep_looping);
+
+// Prompts for a new string and inserts it at the specified location. 
 char* insert(char* str, int length);
+
+// Prompts for a string, searches for it in the working string, and
+// replaces it with a specified string if found.
 char* replace(char* str, int length);
+
+// Helper function that searches the working string for a substring.
 int search(char* str, int &len, char* substr, int &substr_len);
 
+// Shortcut for exiting the program
+void exit(bool &keep_looping);
+
+// Handles getting a C-string as input and allocating memory appropriately.
 char* get_string(int&);
+
+// Handles getting a single character and discaring whitespace from buffer.
 void get_char(char*);
+
+/***************** End Functions *****************************/
 
 int main() {
 
